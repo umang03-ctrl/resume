@@ -84,7 +84,6 @@
       <aside class="hero-card">
         <div class="hero-photo-frame-outer">
           <div class="hero-photo-frame-inner">
-            <!-- Profile Photo of Umang Raj Gupta -->
             <img src="profile.jpeg" alt="Umang Raj Gupta" class="hero-photo-img" />
           </div>
         </div>
@@ -183,7 +182,7 @@
             and driving student leadership toward a future-ready education system.
           </p>
           <div class="role-footer">
-            <button class="action-btn" onclick="openAssetDialog('assets/nep_sarthi_proof.html', 'NEP Saarthi Selection Letter')">
+            <button class="action-btn" onclick="openAssetDialog('umang/nep_sarthi_proof.html', 'NEP Saarthi Selection Letter')">
               <i class="fa-solid fa-file-invoice"></i> View Official Letter
             </button>
           </div>
@@ -238,9 +237,9 @@
             <div class="card-header-row">
               <div>
                 <div class="card-title">Teaching Intern</div>
-                <div class="card-meta">St. Joseph's Convent School, Phagwara · May 2026</div>
+                <div class="card-meta">St. John's Convent School, Phagwara · May 2026</div>
               </div>
-              <div class="card-badge">ICSE Affiliated</div>
+              <div class="card-badge">CBSE Affiliated</div>
             </div>
             <div class="intern-detail">
               <strong>Objective:</strong> To gain practical teaching experience and strengthen classroom management skills.<br>
@@ -248,7 +247,7 @@
               <strong>Outcome:</strong> Developed effective classroom management skills, gained experience in school operations, and improved student participation through interactive teaching strategies.
             </div>
             <div class="card-action-row">
-              <button onclick="openAssetDialog('assets/st_johns_intern.html', 'St. John\'s Internship Summary')" class="btn-text">
+              <button onclick="openAssetDialog('umang/st_johns_intern.html', 'St. John\'s Internship Summary')" class="btn-text">
                 <i class="fa-solid fa-file-signature"></i> View Experience Summary
               </button>
             </div>
@@ -523,10 +522,13 @@
       
       <div class="carousel-container">
         <div class="viewer-box">
-          <iframe id="pdfFrame" src="assets/ctet_cert.html" class="viewerb" title="Certificate Document Viewer"></iframe>
+          <div class="viewer-content" style="position: relative; width: 100%;">
+            <iframe id="pdfFrame" class="viewerb" style="display: none;" title="Certificate Document Viewer"></iframe>
+            <img id="imgFrame" src="umang/cert1.jpg" class="viewerb" style="display: block; object-fit: contain; background: #1e293b;" alt="Certificate Image Viewer" />
+          </div>
           <div class="controls">
             <button onclick="prevPDF()" class="bu" aria-label="Previous Certificate"><i class="fa-solid fa-arrow-left"></i> Previous</button>
-            <span class="pdf-count" id="pdfCount">1 / 5</span>
+            <span class="pdf-count" id="pdfCount">1 / 21</span>
             <button onclick="nextPDF()" class="bu" aria-label="Next Certificate">Next <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
@@ -534,12 +536,26 @@
 
       <div class="click-more-wrapper">
         <div class="credential-grid-list">
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> International Conference ETLLR-23 Delegate (Oct 2023)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> One India - Equality, Diversity, and Inclusivity (Apr 2024)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> CBSE Marks Statement Class XII (May 2023)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> CBSE Marks Statement Class X (Aug 2021)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> Paper Presenter: Gross Happiness Index at ICSS Conference (Apr 2026)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> Teaching Intern Completion: St. Joseph's Convent School (May 2026)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> Henry Harvin Certified Instructional Design Specialist (CIDS) (Sep 2025)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> Coursera: Foundations of Teaching for Learning (Nov 2023)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> STC - Excavation, Cultural Heritage &amp; Digital Archaeology (Feb 2025)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> NPTEL Elite Online Certification - Sustainable Development (Apr 2025)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> Teaching Intern Completion: Apex School, Ballia (Aug 2025)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> Teaching Intern Completion: Delhi Public School, Jalandhar (May 2025)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> LPU Innotek Annual Innovation &amp; Project Expo (Apr 2025)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> Educational Technology Short-Term Course (Grade A, Feb 2024)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> Teaching Intern Completion: Saathi NGO "Learn to Earn" (Jul 2024)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> STC - Archaeology and Epigraphy (Grade A, Apr 2024)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> Dance Participant: LPU One India - One World 2025 (Apr 2025)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> Teaching Intern Completion: Saathi NGO "Aparajita" Project (Jul 2024)</div>
           <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> Chitkara International Article Writing Competition (Feb 2026)</div>
-          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> NPTEL – Education for Sustainable Development (July 2025)</div>
-          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> NSPC 2025 – National Students Paryavaran Competition (July 2025)</div>
-          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> STC – Excavation, Cultural Heritage &amp; Digital Archaeology (Mar 2025)</div>
-          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> CTET – Central Teacher Eligibility Test CBSE Qualified (Oct 2024)</div>
-          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> STC – Archaeology and Epigraphy (May 2024)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> UGC NEP SAARTHI Student Ambassador (May 2026)</div>
         </div>
       </div>
     </section>
@@ -565,7 +581,7 @@
               Rigorous teacher-training program combining core undergraduate Humanities study with professional education courses in pedagogy, child development, and ICT integration.
             </p>
             <div class="edu-action">
-              <button onclick="openAssetDialog('assets/ba_bed_marksheet.html', 'B.A. B.Ed. Transcript summary')" class="btn-text">
+              <button onclick="openAssetDialog('umang/ba_bed_marksheet.html', 'B.A. B.Ed. Transcript summary')" class="btn-text">
                 <i class="fa-solid fa-file-pdf"></i> View Academic Summary
               </button>
             </div>
@@ -598,7 +614,8 @@
           <button id="closeDialogBtn" class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="dialog-body">
-          <iframe src="" id="dialogIframe" class="dialog-iframe" title="Academic Document Preview"></iframe>
+          <iframe src="" id="dialogIframe" class="dialog-iframe" style="display: none;" title="Academic Document Preview"></iframe>
+          <img src="" id="dialogImg" class="dialog-iframe" style="display: none; object-fit: contain; background: #1e293b;" alt="Academic Document Preview Image" />
         </div>
       </dialog>
     </section>
