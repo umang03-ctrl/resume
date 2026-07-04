@@ -3,11 +3,9 @@ if ('IntersectionObserver' in window) {
   document.body.classList.add('js-active');
 }
 
-// ==========================================================================
-// 1. THEME SWITCHER CONTROLLER (SYNCED & LOCALSTORAGE PERSISTENT)
-// ==========================================================================
 const themeCheckbox = document.getElementById('themeCheckbox');
 
+// Check for saved theme preference, otherwise default to dark (unchecked)
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'light') {
   themeCheckbox.checked = true;
@@ -25,6 +23,7 @@ themeCheckbox.addEventListener('change', () => {
     document.body.classList.remove('light-theme');
     localStorage.setItem('theme', 'dark');
   }
+  // Re-initialize canvas colors to match new theme
   initCanvasThemeColors();
 });
 
@@ -48,6 +47,7 @@ if (closeDrawer && mobileDrawer) {
   });
 }
 
+// Close drawer when clicking any link
 drawerLinks.forEach(link => {
   link.addEventListener('click', () => {
     mobileDrawer.classList.remove('active');
@@ -57,33 +57,66 @@ drawerLinks.forEach(link => {
 // ==========================================================================
 // 3. CERTIFICATE CAROUSEL (UPDATED LIST FOR UMANG RAJ GUPTA)
 // ==========================================================================
-const pdfList = [
-  "assets/ctet_cert.html",
-  "assets/nptel_cert.html",
-  "assets/nep_sarthi_proof.html",
-  "assets/st_johns_intern.html",
-  "assets/ba_bed_marksheet.html"
+const certificateList = [
+  "umang/cert1.jpeg",
+  "umang/cert2.jpeg",
+  "umang/cert3.jpeg",
+  "umang/cert4.jpeg",
+  "umang/cert5.jpeg",
+  "umang/cert6.jpeg",
+  "umang/cert7.jpeg",
+  "umang/cert8.jpeg",
+  "umang/cert9.jpeg",
+  "umang/cert10.jpeg",
+  "umang/cert11.jpeg",
+  "umang/cert12.jpeg",
+  "umang/cert13.jpeg",
+  "umang/cert14.jpeg",
+  "umang/cert15.jpeg",
+  "umang/cert16.jpeg",
+  "umang/cert17.jpeg",
+  "umang/cert18.jpeg",
+  "umang/cert19.jpeg",
 ];
 
 let currentIndex = 0;
 
 function updateViewer() {
   const iframe = document.getElementById("pdfFrame");
+  const img = document.getElementById("imgFrame");
   const counter = document.getElementById("pdfCount");
   
-  if (iframe && counter) {
-    iframe.src = pdfList[currentIndex];
-    counter.textContent = (currentIndex + 1) + " / " + pdfList.length;
+  if (iframe && img && counter) {
+    const currentPath = certificateList[currentIndex];
+    const lowercasePath = currentPath.toLowerCase();
+    const isImage = lowercasePath.endsWith(".jpg") || lowercasePath.endsWith(".png") || lowercasePath.endsWith(".jpeg") || lowercasePath.endsWith(".webp");
+    
+    console.log("DEBUG: currentIndex =", currentIndex);
+    console.log("DEBUG: currentPath =", currentPath);
+    console.log("DEBUG: isImage =", isImage);
+    
+    if (isImage) {
+      iframe.style.display = "none";
+      iframe.src = "";
+      img.src = currentPath;
+      img.style.display = "block";
+    } else {
+      img.style.display = "none";
+      img.src = "";
+      iframe.src = currentPath;
+      iframe.style.display = "block";
+    }
+    counter.textContent = (currentIndex + 1) + " / " + certificateList.length;
   }
 }
 
 function nextPDF() {
-  currentIndex = (currentIndex + 1) % pdfList.length;
+  currentIndex = (currentIndex + 1) % certificateList.length;
   updateViewer();
 }
 
 function prevPDF() {
-  currentIndex = (currentIndex - 1 + pdfList.length) % pdfList.length;
+  currentIndex = (currentIndex - 1 + certificateList.length) % certificateList.length;
   updateViewer();
 }
 
@@ -92,12 +125,24 @@ function prevPDF() {
 // ==========================================================================
 const assetDialog = document.getElementById("assetDialog");
 const dialogIframe = document.getElementById("dialogIframe");
+const dialogImg = document.getElementById("dialogImg");
 const dialogTitle = document.getElementById("dialogTitle");
 const closeDialogBtn = document.getElementById("closeDialogBtn");
 
 function openAssetDialog(url, title) {
-  if (assetDialog && dialogIframe && dialogTitle) {
-    dialogIframe.src = url;
+  if (assetDialog && dialogIframe && dialogImg && dialogTitle) {
+    const isImage = url.endsWith(".jpg") || url.endsWith(".png") || url.endsWith(".jpeg");
+    if (isImage) {
+      dialogIframe.style.display = "none";
+      dialogIframe.src = "";
+      dialogImg.src = url;
+      dialogImg.style.display = "block";
+    } else {
+      dialogImg.style.display = "none";
+      dialogImg.src = "";
+      dialogIframe.src = url;
+      dialogIframe.style.display = "block";
+    }
     dialogTitle.textContent = title;
     assetDialog.showModal();
   }
@@ -107,6 +152,7 @@ if (closeDialogBtn && assetDialog) {
   closeDialogBtn.addEventListener("click", () => {
     assetDialog.close();
     if (dialogIframe) dialogIframe.src = "";
+    if (dialogImg) dialogImg.src = "";
   });
 }
 
@@ -119,14 +165,14 @@ const ctx = canvas.getContext('2d');
 let particles = [];
 let maxParticles = 80;
 let connectionDistance = 110;
-let particleColor = 'rgba(13, 148, 136, 0.4)'; 
-let lineColor = 'rgba(99, 102, 241, 0.08)';  
+let particleColor = 'rgba(13, 148, 136, 0.4)';  // Default Dark Theme Primary
+let lineColor = 'rgba(99, 102, 241, 0.08)';     // Default Dark Theme Secondary
 
 function initCanvasThemeColors() {
   const isLight = document.body.classList.contains('light-theme');
   if (isLight) {
-    particleColor = 'rgba(15, 118, 110, 0.25)';  
-    lineColor = 'rgba(79, 70, 229, 0.05)';      
+    particleColor = 'rgba(15, 118, 110, 0.25)';  // Softer primary
+    lineColor = 'rgba(79, 70, 229, 0.05)';      // Very soft secondary
   } else {
     particleColor = 'rgba(13, 148, 136, 0.45)';
     lineColor = 'rgba(99, 102, 241, 0.09)';
@@ -152,6 +198,7 @@ window.addEventListener('mouseout', () => {
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  // Adjust particle density based on screen size
   if (window.innerWidth < 768) {
     maxParticles = 35;
     connectionDistance = 85;
@@ -179,6 +226,7 @@ class Particle {
   }
 
   update() {
+    // Bounce edges
     if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
     if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
     
@@ -189,6 +237,7 @@ class Particle {
   }
 }
 
+// Initialize Particles array
 function initParticles() {
   particles = [];
   for (let i = 0; i < maxParticles; i++) {
@@ -213,6 +262,7 @@ function drawConnections() {
       }
     }
 
+    // Connect to mouse
     if (mouse.x !== null && mouse.y !== null) {
       let dx = particles[i].x - mouse.x;
       let dy = particles[i].y - mouse.y;
@@ -236,6 +286,7 @@ function animateCanvas() {
   requestAnimationFrame(animateCanvas);
 }
 
+// Initialize Canvas
 window.addEventListener('resize', resizeCanvas);
 initCanvasThemeColors();
 resizeCanvas();
@@ -250,6 +301,7 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('active-reveal');
+      // Unobserve once active so animation doesn't repeat on back scroll
       observer.unobserve(entry.target);
     }
   });
@@ -310,6 +362,7 @@ function submitFeedback() {
   }
 
   console.log("Feedback Submitted:", { rating, comment });
+  
   alert(`Thank you for your feedback!\nRating: ${rating} Star(s)\nComment: ${comment || 'None'}`);
   
   document.getElementById("comment").value = "";
@@ -317,10 +370,12 @@ function submitFeedback() {
   rating = 0;
 }
 
+// Initial trigger
 document.addEventListener("DOMContentLoaded", () => {
   updateViewer();
 });
 
+// Export functions for global access in HTML onclick properties
 window.nextPDF = nextPDF;
 window.prevPDF = prevPDF;
 window.openAssetDialog = openAssetDialog;
