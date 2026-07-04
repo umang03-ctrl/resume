@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Umang Raj Gupta – Academic &amp; Teaching E-Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional teaching and academic research e-portfolio of Umang Raj Gupta: Educator, UGC NEP Saarthi, and student research coordinator." />
+  
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>if ('IntersectionObserver' in window) { document.body.classList.add('js-active'); }</script>
+
+  <!-- Background Interactive Network Canvas -->
+  <canvas id="canvas-network"></canvas>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <i class="fa-solid fa-graduation-cap logo-icon"></i>
+        <span>UMANG<span>.EDU</span></span>
+      </div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#roles" class="nav-link">Leadership</a>
+        <a href="#internships" class="nav-link">Internships</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#certificates" class="nav-link">Credentials</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          <i class="fa-solid fa-envelope"></i> Contact
+        </button>
+        <button class="hamburger-btn" id="menuToggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <button class="close-drawer" id="closeDrawer" aria-label="Close Navigation Menu">&times;</button>
+    <nav class="drawer-links">
+      <a href="#about" class="drawer-link">About</a>
+      <a href="#roles" class="drawer-link">Leadership &amp; UGC Roles</a>
+      <a href="#internships" class="drawer-link">Teaching Internships</a>
+      <a href="#research" class="drawer-link">Research &amp; Publications</a>
+      <a href="#skills" class="drawer-link">Teaching Skills</a>
+      <a href="#certificates" class="drawer-link">Credentials &amp; Certs</a>
+      <a href="#contact" class="drawer-link">Contact</a>
+    </nav>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+    
+    <!-- Theme Switcher Slide Control -->
+    <div class="theme-switch-wrapper">
+      <span class="theme-label-text">Theme Mode:</span>
+      <label class="theme-switch" for="themeCheckbox">
+        <input type="checkbox" id="themeCheckbox" />
+        <div class="slider-toggle">
+          <span class="slider-icon sun"><i class="fa-solid fa-sun"></i></span>
+          <span class="slider-icon moon"><i class="fa-solid fa-moon"></i></span>
+          <div class="slider-ball"></div>
+        </div>
+      </label>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero anchor-offset reveal" id="about">
+      <!-- LEFT SIDE: PHOTO + STATS CARD -->
+      <aside class="hero-card">
+        <div class="hero-photo-frame-outer">
+          <div class="hero-photo-frame-inner">
+            <!-- Profile Photo of Umang Raj Gupta -->
+            <img src="profile.jpeg" alt="Umang Raj Gupta" class="hero-photo-img" />
+          </div>
+        </div>
+
+        <div class="hero-chip-row">
+          <span class="hero-chip">B.A. B.Ed. Undergraduate</span>
+          <span class="hero-chip">UGC NEP Saarthi</span>
+          <span class="hero-chip">Academic Researcher</span>
+        </div>
+
+        <div class="hero-card-grid">
+          <div class="mini-card">
+            <div class="mini-label">Academic Grade</div>
+            <div class="mini-main">CGPA: 9.4</div>
+            <div class="mini-sub">LPU Education Dept.</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-label">Specialization</div>
+            <div class="mini-main">Social Sciences &amp; ICT</div>
+            <div class="mini-sub">Active Pedagogy</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-label">Research Works</div>
+            <div class="mini-main">5+ Papers Published</div>
+            <div class="mini-sub">NEP 2020 Focus</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-label">Core Strength</div>
+            <div class="mini-main">Gamification &amp; STEM</div>
+            <div class="mini-sub">Interactive Lessons</div>
+          </div>
+        </div>
+
+        <div class="hero-note">
+          "I bridge historical perspectives and modern pedagogy using gamification, active reflection, and structured lesson plans to inspire the next generation."
+        </div>
+      </aside>
+
+      <!-- RIGHT SIDE: BIO DETAILS -->
+      <div class="hero-info">
+        <div class="hero-badge-row">
+          <div class="hero-badge">
+            <span class="hero-dot"></span>
+            <span>UGC Appointed Student Ambassador</span>
+          </div>
+          <div class="hero-badge">
+            📍 Ballia (UP) / Punjab, India
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          Umang Raj Gupta<br />
+          <span>Innovative Educator &amp; Pedagogical Researcher</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          I am a Bachelor of Arts &amp; Education undergraduate at Lovely Professional University. 
+          I specialize in instructional design, Revised Blooms Taxonomy, and integrating digital tools 
+          (Kahoot, Padlet, Quizizz) inside active Social Science classrooms to foster critical thinking.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag">Curriculum Design</span>
+          <span class="tag">NEP 2020 Reforms</span>
+          <span class="tag">Digital Pedagogy</span>
+          <span class="tag">IKS (Indian Knowledge Systems)</span>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="document.getElementById('roles').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-users-gear"></i> Leadership Roles
+          </button>
+          <button class="btn-primary" onclick="document.getElementById('internships').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-chalkboard-user"></i> Teaching Internships
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP & UGC ROLES SECTION -->
+    <section class="section anchor-offset reveal" id="roles">
+      <h2 class="section-title">Leadership &amp; UGC Roles</h2>
+      
+      <div class="roles-grid">
+        <!-- Role 1: NEP Saarthi -->
+        <article class="role-card glass-card">
+          <div class="role-header">
+            <div class="role-badge-ugc">UGC Appointed</div>
+            <h3 class="role-title">NEP SAARTHI</h3>
+            <div class="role-org">University Grants Commission (UGC)</div>
+            <div class="role-duration">May 2026 – Present</div>
+          </div>
+          <p class="role-desc">
+            Selected as an ambassador to support the implementation of the National Education Policy (NEP) 2020. 
+            Focused on promoting awareness of holistic, inclusive learning, engaging with campus stakeholders, 
+            and driving student leadership toward a future-ready education system.
+          </p>
+          <div class="role-footer">
+            <button class="action-btn" onclick="openAssetDialog('assets/nep_sarthi_proof.html', 'NEP Saarthi Selection Letter')">
+              <i class="fa-solid fa-file-invoice"></i> View Official Letter
+            </button>
+          </div>
+        </article>
+
+        <!-- Role 2: Research Coordinator -->
+        <article class="role-card glass-card">
+          <div class="role-header">
+            <div class="role-badge-dept">LPU Dept.</div>
+            <h3 class="role-title">Student Research Coordinator</h3>
+            <div class="role-org">Department of Education, LPU</div>
+            <div class="role-duration">Aug 2025 – Present</div>
+          </div>
+          <p class="role-desc">
+            Facilitate student engagement in academic research by guiding peers through topic selection and proposal development. 
+            Coordinate research-oriented workshops, seminars, and presentations while serving as a key liaison between students 
+            and faculty mentors to foster a collaborative academic culture.
+          </p>
+          <div class="role-footer">
+            <span class="role-indicator"><i class="fa-solid fa-atom"></i> Academic Lead</span>
+          </div>
+        </article>
+
+        <!-- Role 3: Brand Ambassador Edrev -->
+        <article class="role-card glass-card">
+          <div class="role-header">
+            <div class="role-badge-edrev">Edrev Org</div>
+            <h3 class="role-title">Brand Ambassador of Edrev</h3>
+            <div class="role-org">Lovely Professional University</div>
+            <div class="role-duration">Mar 2025 – Present</div>
+          </div>
+          <p class="role-desc">
+            Appointed to represent and promote Edrev, focusing on making quality digital educational resources more accessible 
+            and learner-centric. Connect with fellow students to foster collaborative learning communities and drive engagement 
+            with innovative educational tools.
+          </p>
+          <div class="role-footer">
+            <span class="role-indicator"><i class="fa-solid fa-compass"></i> Community Builder</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TEACHING INTERNSHIPS SECTION -->
+    <section class="section anchor-offset reveal" id="internships">
+      <h2 class="section-title">Teaching Internships</h2>
+
+      <div class="section-grid">
+        <div class="experience-list">
+          
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">Teaching Intern</div>
+                <div class="card-meta">St. John's Convent School, Phagwara · May 2026</div>
+              </div>
+              <div class="card-badge">CBSE Affiliated</div>
+            </div>
+            <div class="intern-detail">
+              <strong>Objective:</strong> To gain practical teaching experience and strengthen classroom management skills.<br>
+              <strong>Details:</strong> Assisted in classroom teaching, examination duties, and school activities while implementing gamification techniques to enhance student engagement.<br>
+              <strong>Outcome:</strong> Developed effective classroom management skills, gained experience in school operations, and improved student participation through interactive teaching strategies.
+            </div>
+            <div class="card-action-row">
+              <button onclick="openAssetDialog('assets/st_johns_intern.html', 'St. John\'s Internship Summary')" class="btn-text">
+                <i class="fa-solid fa-file-signature"></i> View Experience Summary
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">Teaching Intern</div>
+                <div class="card-meta">Apex International School, Ballia · Jun – Jul 2025</div>
+              </div>
+              <div class="card-badge">Middle School</div>
+            </div>
+            <div class="intern-detail">
+              <strong>Objective:</strong> To deliver interactive and engaging Social Science instruction to middle school learners.<br>
+              <strong>Details:</strong> Conducted activity-based classes using role-play, presentations, and collaborative tasks; actively participated in school events and parent-teacher interactions to build rapport.<br>
+              <strong>Outcome:</strong> Increased student participation and classroom engagement; strengthened school-community relationships.
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">Teaching Intern</div>
+                <div class="card-meta">Delhi Public School, Jalandhar · May 2025</div>
+              </div>
+              <div class="card-badge">Grades 6–10</div>
+            </div>
+            <div class="intern-detail">
+              <strong>Objective:</strong> To design and implement student-centered Social Science lessons for Grades 6–10.<br>
+              <strong>Details:</strong> Used visual aids, storytelling, and regular assessments; collaborated with mentor teachers to refine teaching strategies.<br>
+              <strong>Outcome:</strong> Improved students’ conceptual understanding and academic performance; enhanced lesson effectiveness.
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">Education Intern</div>
+                <div class="card-meta">Saathi Foundation, Noida · Jun – Jul 2024</div>
+              </div>
+              <div class="card-badge">Saathi NGO</div>
+            </div>
+            <div class="intern-detail">
+              <strong>Objective:</strong> To develop teaching competencies through community-based educational engagement.<br>
+              <strong>Details:</strong> Created digital lessons using Google Classroom and smart boards; practiced reflective teaching to build communication and presentation skills.<br>
+              <strong>Outcome:</strong> Strengthened digital pedagogy skills and increased learner engagement; improved professional communication.
+            </div>
+          </article>
+
+        </div>
+
+        <div class="experience-details">
+          <article class="card card-visual">
+            <div class="visual-placeholder">
+              <i class="fa-solid fa-chalkboard-user code-visual-icon"></i>
+              <div class="visual-glow"></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header-row">
+              <div class="card-title">Pedagogical Approach</div>
+            </div>
+            <div class="bullet-grid">
+              <div class="bullet-item">
+                <div class="bullet-dot"></div>
+                <div>Application of Blooms Taxonomy to map student learning outcomes.</div>
+              </div>
+              <div class="bullet-item">
+                <div class="bullet-dot"></div>
+                <div>Micro-teaching cycles with constructive reflective practices.</div>
+              </div>
+              <div class="bullet-item">
+                <div class="bullet-dot"></div>
+                <div>Gamification integration using digital response tools.</div>
+              </div>
+              <div class="bullet-item">
+                <div class="bullet-dot"></div>
+                <div>Design of clear, rubric-driven, diagnostic assessments.</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header-row">
+              <div class="card-title">Educational Philosophy</div>
+            </div>
+            <ul class="list">
+              <li>Lessons must be student-centered and active; passive lecturing is ineffective.</li>
+              <li>Indian Knowledge Systems provide contextual depth to liberal arts learning.</li>
+              <li>Technology is a multiplier, not a replacement, for solid teacher-student connection.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH PAPERS & PUBLICATIONS SECTION -->
+    <section class="section anchor-offset reveal" id="research">
+      <h2 class="section-title">Research Publications &amp; Projects</h2>
+
+      <div class="research-layout">
+        <!-- Publications Timeline -->
+        <div class="publications-wrapper">
+          <h3 class="sub-section-title"><i class="fa-solid fa-book-bookmark"></i> Academic Papers &amp; Edited Volumes</h3>
+          <div class="timeline">
+            
+            <div class="timeline-item">
+              <div class="time-marker">Apr 2026</div>
+              <div class="time-content">
+                <h4>NEP 2020: Promises and Practices</h4>
+                <p>Analyzing policy goals versus structural deployment rates across state school boards.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="time-marker">Mar 2026</div>
+              <div class="time-content">
+                <h4>Integrating Indian Knowledge System in School Curricula: A Roadmap for NEP 2020</h4>
+                <p>Research on frameworks to incorporate indigenous pedagogy into national curriculum boards.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="time-marker">Jan 2026</div>
+              <div class="time-content">
+                <h4>Hygiene and Sanitation Literacy: The Transformative Role of Education</h4>
+                <p>Investigating schools as vectors of hygiene awareness and localized social transformations.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="time-marker">Nov 2025</div>
+              <div class="time-content">
+                <h4>The French Revolution and the Birth of Modern Political Consciousness</h4>
+                <p>Co-edited and contributed to the book <strong>Ethos of Changes: Europe's Journey from Revolution to Democracy</strong>, LPU Publication.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="time-marker">Jun 2025</div>
+              <div class="time-content">
+                <h4>NEP 2020 and the Transformation of Teaching</h4>
+                <p>Book chapter contribution in <strong>Insights into NEP 2020</strong>, LPU Publication, discussing educator capacity building.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Academic Projects -->
+        <div class="projects-wrapper">
+          <h3 class="sub-section-title"><i class="fa-solid fa-file-shield"></i> Research Projects</h3>
+
+          <div class="project-card-custom">
+            <div class="proj-badge">Jan 2025</div>
+            <h4>Agni Pariksha: A Symbol of Patriarchy or Divine Strength</h4>
+            <p>
+              Researched and analyzed the cultural and gender-based implications of the "Agni Pariksha" as a symbol in historical and literary contexts. 
+              Developed a critical perspective on how this symbol represents themes of patriarchy versus divine strength, synthesizing findings into a structured project.
+            </p>
+          </div>
+
+          <div class="project-card-custom">
+            <div class="proj-badge">Jun - Jul 2024</div>
+            <h4>Central Development Project (CDP)</h4>
+            <p>
+              Engaged in community-focused developmental initiatives to support the NGO's educational and social objectives during a two-month internship. 
+              Applied practical organizational and leadership skills to coordinate and implement project goals.
+            </p>
+          </div>
+
+          <!-- Academic Conferences -->
+          <div class="conferences-card">
+            <h3 class="sub-section-title"><i class="fa-solid fa-users-rectangle"></i> Key Conferences Attended</h3>
+            <ul class="conference-list">
+              <li><i class="fa-solid fa-check-double text-emerald"></i> International Conference on Social Sciences: Past, Present, and Future (Apr 2026)</li>
+              <li><i class="fa-solid fa-check-double text-emerald"></i> National Conference on Liberal &amp; Creative Arts (Aug 2025)</li>
+              <li><i class="fa-solid fa-check-double text-emerald"></i> Chhatra Sansad Conference, Lovely Professional University (Mar 2025)</li>
+              <li><i class="fa-solid fa-check-double text-emerald"></i> Delegate, International Conference on Emerging Trends in Literature, Language &amp; Research (Oct 2023)</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section anchor-offset reveal" id="skills">
+      <h2 class="section-title">Pedagogical Skills &amp; Methodology</h2>
+
+      <div class="section-grid">
+        <div class="skills-column">
+          <article class="card">
+            <div class="card-header-row">
+              <div class="card-title">Curriculum &amp; Evaluation</div>
+            </div>
+            <div class="chips">
+              <span class="chip-strong">Revised Blooms Taxonomy</span>
+              <span class="chip">Micro-Teaching</span>
+              <span class="chip">Demonstration Lessons</span>
+              <span class="chip">Instructional Design</span>
+              <span class="chip">Rubric Design</span>
+              <span class="chip">Marking Schemes</span>
+              <span class="chip">Self-Assessment Techniques</span>
+            </div>
+            <p class="skills-desc">
+              Trained in structuring learning benchmarks, designing diagnostic assessments, and implementing peer-evaluation structures inside classrooms.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-header-row">
+              <div class="card-title">Digital Classroom Tools</div>
+            </div>
+            <div class="chips">
+              <span class="chip-strong">Kahoot! Gamification</span>
+              <span class="chip">Padlet Interactive Boards</span>
+              <span class="chip">Canva for Education</span>
+              <span class="chip">Quizizz Assessments</span>
+              <span class="chip">Google Classroom</span>
+              <span class="chip">Smart Board Integration</span>
+            </div>
+            <p class="skills-desc">
+              Leveraging technology to construct real-time response games, visual study guides, and interactive peer platforms to promote hybrid learning.
+            </p>
+          </article>
+        </div>
+
+        <div class="skills-column">
+          <article class="card">
+            <div class="card-header-row">
+              <div class="card-title">Soft Skills &amp; Leadership</div>
+            </div>
+            <ul class="list">
+              <li>Time Management: Coordinating multiple student projects and departmental workshops.</li>
+              <li>Effective Communication: Translating complex historical and policy structures to school students.</li>
+              <li>Team Collaboration: Actively coordinating research and co-authoring book chapters.</li>
+              <li>Student Leadership: Serving as a UGC appointed ambassador (NEP Saarthi) for institutional reform.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-header-row">
+              <div class="card-title">Academic Achievements</div>
+            </div>
+            <ul class="achievement-list-block">
+              <li class="achievement-item">
+                <span>Secured <strong>Third Position</strong> in National Teaching Skill Competition (Sep 2025) - Dept. of Education, LPU.</span>
+                <svg class="achievement-icon-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="40" fill="#f59e0b" />
+                  <path d="M 30 70 L 50 30 L 70 70 Z" fill="#ffffff" />
+                </svg>
+              </li>
+              <li class="achievement-item">
+                <span>Secured <strong>First Position</strong> in Edu Revolution (Elocution, Reel Making &amp; Infographics, Mar 2025) - Dept. of Education, LPU.</span>
+                <svg class="achievement-icon-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="40" fill="#10b981" />
+                  <path d="M 35 35 L 65 35 L 65 65 L 35 65 Z" fill="#ffffff" />
+                </svg>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS & CERTIFICATES SECTION -->
+    <section class="section anchor-offset reveal" id="certificates">
+      <h2 class="section-title">Credentials &amp; Certifications</h2>
+      
+      <div class="carousel-container">
+        <div class="viewer-box">
+          <iframe id="pdfFrame" src="assets/ctet_cert.html" class="viewerb" title="Certificate Document Viewer"></iframe>
+          <div class="controls">
+            <button onclick="prevPDF()" class="bu" aria-label="Previous Certificate"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+            <span class="pdf-count" id="pdfCount">1 / 5</span>
+            <button onclick="nextPDF()" class="bu" aria-label="Next Certificate">Next <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="click-more-wrapper">
+        <div class="credential-grid-list">
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> Chitkara International Article Writing Competition (Feb 2026)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> NPTEL – Education for Sustainable Development (July 2025)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> NSPC 2025 – National Students Paryavaran Competition (July 2025)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> STC – Excavation, Cultural Heritage &amp; Digital Archaeology (Mar 2025)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> CTET – Central Teacher Eligibility Test CBSE Qualified (Oct 2024)</div>
+          <div class="cred-item"><i class="fa-solid fa-award text-amber"></i> STC – Archaeology and Epigraphy (May 2024)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section anchor-offset reveal" id="education">
+      <h2 class="section-title">Academic Journey</h2>
+
+      <div class="section-grid">
+        <article class="education-card card">
+          <div class="edu-logo-wrapper">
+            <i class="fa-solid fa-graduation-cap edu-logo-icon"></i>
+          </div>
+          <div class="edu-content">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">Bachelor of Arts &amp; Education (B.A. B.Ed.)</div>
+                <div class="card-meta">Lovely Professional University · 2023 – 2027</div>
+              </div>
+              <div class="card-badge">CGPA: 9.4</div>
+            </div>
+            <p class="edu-desc">
+              Rigorous teacher-training program combining core undergraduate Humanities study with professional education courses in pedagogy, child development, and ICT integration.
+            </p>
+            <div class="edu-action">
+              <button onclick="openAssetDialog('assets/ba_bed_marksheet.html', 'B.A. B.Ed. Transcript summary')" class="btn-text">
+                <i class="fa-solid fa-file-pdf"></i> View Academic Summary
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="education-card card">
+          <div class="edu-logo-wrapper">
+            <i class="fa-solid fa-school edu-logo-icon"></i>
+          </div>
+          <div class="edu-content">
+            <div class="card-header-row">
+              <div>
+                <div class="card-title">Higher Secondary Education</div>
+                <div class="card-meta">Nagaji Saraswati Vidya Mandir Sr. Sec. School, Ballia (UP) · 2021 – 2023</div>
+              </div>
+              <div class="card-badge">CBSE Board</div>
+            </div>
+            <p class="edu-desc">
+              Completed Higher Secondary boards with focused study in liberal arts and social sciences.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- General View Modal Dialog -->
+      <dialog id="assetDialog" class="dialog-modal">
+        <div class="dialog-header">
+          <h3 id="dialogTitle">Document Preview</h3>
+          <button id="closeDialogBtn" class="close-btn" aria-label="Close dialog">&times;</button>
+        </div>
+        <div class="dialog-body">
+          <iframe src="" id="dialogIframe" class="dialog-iframe" title="Academic Document Preview"></iframe>
+        </div>
+      </dialog>
+    </section>
+
+    <!-- SOCIAL & COMMUNITY WORK SECTION -->
+    <section class="section anchor-offset reveal" id="social">
+      <h2 class="section-title">Social-works &amp; Activities</h2>
+
+      <div class="soci">
+        <div class="soci-card">
+          <svg class="soci-img-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="200" rx="16" fill="#0f172a"/>
+            <text x="150" y="90" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="20" fill="#0d9488" text-anchor="middle">Community Mentoring</text>
+            <text x="150" y="125" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Providing education support in local NGOs</text>
+            <path d="M 120 150 L 180 150" stroke="#0d9488" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="soci-card">
+          <svg class="soci-img-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="200" rx="16" fill="#0f172a"/>
+            <text x="150" y="90" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="20" fill="#10b981" text-anchor="middle">Eco-Literacy Campaigns</text>
+            <text x="150" y="125" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Promoting sustainability in student assemblies</text>
+            <path d="M 120 150 L 180 150" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section anchor-offset reveal" id="contact">
+      <h2 class="section-title">Get In Touch</h2>
+      
+      <div class="hero-contact">
+        <div class="hero-contact-item">
+          <span class="hero-contact-label"><i class="fa-solid fa-phone"></i> Mobile:</span>
+          <span>+91 9305127461</span>
+        </div>
+        <div class="hero-contact-item">
+          <span class="hero-contact-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+          <a href="mailto:umangrajgupta82@gmail.com">umangrajgupta82@gmail.com</a>
+        </div>
+        <div class="hero-contact-item">
+          <a href="https://linkedin.com/in/facilitatorumangrajgupta-" target="_blank" rel="noopener noreferrer">
+            <span class="hero-contact-label"><i class="fa-brands fa-linkedin"></i> LinkedIn</span>
+          </a>
+        </div>
+        <div class="hero-contact-item">
+          <a href="https://github.com/umang03-ctrl" target="_blank" rel="noopener noreferrer">
+            <span class="hero-contact-label"><i class="fa-brands fa-github"></i> GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- FEEDBACK RATING WIDGET -->
+      <div class="feedback-dialog">
+        <h3>Rate Your E-Portfolio Experience</h3>
+        <div class="stars">
+          <button class="star" data-value="1" aria-label="Rate 1 star">★</button>
+          <button class="star" data-value="2" aria-label="Rate 2 stars">★</button>
+          <button class="star" data-value="3" aria-label="Rate 3 stars">★</button>
+          <button class="star" data-value="4" aria-label="Rate 4 stars">★</button>
+          <button class="star" data-value="5" aria-label="Rate 5 stars">★</button>
+        </div>
+        <textarea id="comment" placeholder="Write your feedback or queries for Umang here..." aria-label="Feedback comment"></textarea>
+        <button onclick="submitFeedback()" class="btn-submit">Submit Feedback</button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-copy">
+        &copy; <span id="year"></span> &middot; Academic E-Portfolio of <strong>Umang Raj Gupta</strong>
+      </div>
+      <div class="footer-clock" id="dateTime" aria-live="polite"></div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
