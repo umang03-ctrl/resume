@@ -58,25 +58,25 @@ drawerLinks.forEach(link => {
 // 3. CERTIFICATE CAROUSEL (UPDATED LIST FOR UMANG RAJ GUPTA)
 // ==========================================================================
 const certificateList = [
-  "umang/cert1.jpeg",
-  "umang/cert2.jpeg",
-  "umang/cert3.jpeg",
-  "umang/cert4.jpeg",
-  "umang/cert5.jpeg",
-  "umang/cert6.jpeg",
-  "umang/cert7.jpeg",
-  "umang/cert8.jpeg",
-  "umang/cert9.jpeg",
-  "umang/cert10.jpeg",
-  "umang/cert11.jpeg",
-  "umang/cert12.jpeg",
-  "umang/cert13.jpeg",
-  "umang/cert14.jpeg",
-  "umang/cert15.jpeg",
-  "umang/cert16.jpeg",
-  "umang/cert17.jpeg",
-  "umang/cert18.jpeg",
-  "umang/cert19.jpeg",
+  "cert1.jpeg",
+  "cert2.jpeg",
+  "cert3.jpeg",
+  "cert4.jpeg",
+  "cert5.jpeg",
+  "cert6.jpeg",
+  "cert7.jpeg",
+  "cert8.jpeg",
+  "cert9.jpeg",
+  "cert10.jpeg",
+  "cert11.jpeg",
+  "cert12.jpeg",
+  "cert13.jpeg",
+  "cert14.jpeg",
+  "cert15.jpeg",
+  "cert16.jpeg",
+  "cert17.jpeg",
+  "cert18.jpeg",
+  "cert19.jpeg",
 ];
 
 let currentIndex = 0;
@@ -114,6 +114,12 @@ function nextPDF() {
   currentIndex = (currentIndex + 1) % certificateList.length;
   updateViewer();
 }
+
+// Export functions for global access in HTML onclick properties
+window.nextPDF = nextPDF;
+window.prevPDF = prevPDF;
+window.openAssetDialog = openAssetDialog;
+window.submitFeedback = submitFeedback;
 
 function prevPDF() {
   currentIndex = (currentIndex - 1 + certificateList.length) % certificateList.length;
@@ -374,9 +380,3 @@ function submitFeedback() {
 document.addEventListener("DOMContentLoaded", () => {
   updateViewer();
 });
-
-// Export functions for global access in HTML onclick properties
-window.nextPDF = nextPDF;
-window.prevPDF = prevPDF;
-window.openAssetDialog = openAssetDialog;
-window.submitFeedback = submitFeedback;
