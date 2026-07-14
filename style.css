@@ -1056,6 +1056,62 @@ body.light-theme .mini-card {
   line-height: 1.6;
 }
 
+.project-overview {
+  margin-bottom: 0.75rem;
+}
+
+.project-details-section {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-details-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.project-bullets {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.project-bullets li {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  position: relative;
+  padding-left: 1rem;
+  line-height: 1.5;
+}
+
+.project-bullets li::before {
+  content: "•";
+  color: var(--primary);
+  font-size: 1rem;
+  position: absolute;
+  left: 0.15rem;
+  top: -0.05rem;
+}
+
+.project-skills-wrapper {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--card-border);
+}
+
+.project-skills-wrapper .chips {
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+}
+
 .conferences-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
